@@ -44,7 +44,7 @@
             lblCategory = new Label();
             lblStockStatus = new Label();
             cmbStockStatus = new ComboBox();
-            textBoxfilter = new TextBox();
+            txtSearch = new TextBox();
             cmbCategory = new ComboBox();
             pnlGrid = new Panel();
             dgvProducts = new DataGridView();
@@ -178,7 +178,7 @@
             tblFilters.Controls.Add(lblCategory, 1, 0);
             tblFilters.Controls.Add(lblStockStatus, 2, 0);
             tblFilters.Controls.Add(cmbStockStatus, 2, 1);
-            tblFilters.Controls.Add(textBoxfilter, 0, 1);
+            tblFilters.Controls.Add(txtSearch, 0, 1);
             tblFilters.Controls.Add(cmbCategory, 1, 1);
             tblFilters.Dock = DockStyle.Fill;
             tblFilters.Location = new Point(13, 12);
@@ -229,15 +229,17 @@
             cmbStockStatus.Name = "cmbStockStatus";
             cmbStockStatus.Size = new Size(237, 33);
             cmbStockStatus.TabIndex = 5;
+            cmbStockStatus.SelectedIndexChanged += cmbStockStatus_SelectedIndexChanged;
             // 
-            // textBoxfilter
+            // txtSearch
             // 
-            textBoxfilter.Dock = DockStyle.Fill;
-            textBoxfilter.Location = new Point(3, 40);
-            textBoxfilter.Margin = new Padding(3, 4, 3, 4);
-            textBoxfilter.Name = "textBoxfilter";
-            textBoxfilter.Size = new Size(318, 31);
-            textBoxfilter.TabIndex = 6;
+            txtSearch.Dock = DockStyle.Fill;
+            txtSearch.Location = new Point(3, 40);
+            txtSearch.Margin = new Padding(3, 4, 3, 4);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(318, 31);
+            txtSearch.TabIndex = 6;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // cmbCategory
             // 
@@ -248,6 +250,7 @@
             cmbCategory.Name = "cmbCategory";
             cmbCategory.Size = new Size(237, 33);
             cmbCategory.TabIndex = 4;
+            cmbCategory.SelectedIndexChanged += cmbCategory_SelectedIndexChanged;
             // 
             // pnlGrid
             // 
@@ -371,7 +374,7 @@
         private System.Windows.Forms.ComboBox cmbStockStatus;
         private System.Windows.Forms.Panel pnlGrid;
         private System.Windows.Forms.DataGridView dgvProducts;
-        private System.Windows.Forms.TextBox textBoxfilter;
+        private System.Windows.Forms.TextBox txtSearch;
         private DataGridViewTextBoxColumn ColId;
         private DataGridViewTextBoxColumn ColName;
         private DataGridViewTextBoxColumn ColCategory;
