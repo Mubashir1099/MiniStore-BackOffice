@@ -1,0 +1,17 @@
+﻿using App.Core.Utilities;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace App.Core.Models
+{
+    public class Product
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public ProductCategoryEnum category { get; set; }
+        public int Stock { get; set; }
+        public decimal Price { get; set; }
+       public ProductStatusEnum status { get; set; }
+    }
+}
