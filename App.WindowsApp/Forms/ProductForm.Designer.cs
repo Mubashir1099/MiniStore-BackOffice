@@ -199,6 +199,8 @@
             // btnSave
             // 
             btnSave.AutoSize = true;
+            btnSave.Image = Properties.Resources.diskette__1_;
+            btnSave.ImageAlign = ContentAlignment.MiddleLeft;
             btnSave.Location = new Point(685, 3);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(112, 35);
@@ -209,6 +211,8 @@
             // 
             // btnCancel
             // 
+            btnCancel.Image = Properties.Resources.cancel__1_;
+            btnCancel.ImageAlign = ContentAlignment.MiddleLeft;
             btnCancel.Location = new Point(567, 3);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(112, 34);

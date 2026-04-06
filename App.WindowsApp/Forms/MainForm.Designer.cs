@@ -47,6 +47,7 @@
             statusStrip1 = new StatusStrip();
             lblStatus = new ToolStripStatusLabel();
             pnlcontent = new Panel();
+            btnCustomer = new Button();
             Pnlheader.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)flpPictureBoxRight).BeginInit();
@@ -135,6 +136,7 @@
             // 
             flpnavbar.Controls.Add(btnDashboard);
             flpnavbar.Controls.Add(btnProduct);
+            flpnavbar.Controls.Add(btnCustomer);
             flpnavbar.Controls.Add(btnorder);
             flpnavbar.Controls.Add(btnreport);
             flpnavbar.Controls.Add(btnsync);
@@ -191,7 +193,7 @@
             btnorder.FlatStyle = FlatStyle.Flat;
             btnorder.Image = (Image)resources.GetObject("btnorder.Image");
             btnorder.ImageAlign = ContentAlignment.MiddleLeft;
-            btnorder.Location = new Point(3, 182);
+            btnorder.Location = new Point(3, 241);
             btnorder.Margin = new Padding(3, 4, 3, 4);
             btnorder.Name = "btnorder";
             btnorder.Size = new Size(216, 81);
@@ -208,7 +210,7 @@
             btnreport.FlatStyle = FlatStyle.Flat;
             btnreport.Image = (Image)resources.GetObject("btnreport.Image");
             btnreport.ImageAlign = ContentAlignment.MiddleLeft;
-            btnreport.Location = new Point(3, 271);
+            btnreport.Location = new Point(3, 330);
             btnreport.Margin = new Padding(3, 4, 3, 4);
             btnreport.Name = "btnreport";
             btnreport.Size = new Size(216, 81);
@@ -224,7 +226,7 @@
             btnsync.FlatStyle = FlatStyle.Flat;
             btnsync.Image = (Image)resources.GetObject("btnsync.Image");
             btnsync.ImageAlign = ContentAlignment.MiddleLeft;
-            btnsync.Location = new Point(3, 360);
+            btnsync.Location = new Point(3, 419);
             btnsync.Margin = new Padding(3, 4, 3, 4);
             btnsync.Name = "btnsync";
             btnsync.Size = new Size(216, 81);
@@ -240,7 +242,7 @@
             btnlogs.FlatStyle = FlatStyle.Flat;
             btnlogs.Image = (Image)resources.GetObject("btnlogs.Image");
             btnlogs.ImageAlign = ContentAlignment.MiddleLeft;
-            btnlogs.Location = new Point(3, 449);
+            btnlogs.Location = new Point(3, 508);
             btnlogs.Margin = new Padding(3, 4, 3, 4);
             btnlogs.Name = "btnlogs";
             btnlogs.Size = new Size(216, 81);
@@ -256,7 +258,7 @@
             btnsetting.FlatStyle = FlatStyle.Flat;
             btnsetting.Image = (Image)resources.GetObject("btnsetting.Image");
             btnsetting.ImageAlign = ContentAlignment.MiddleLeft;
-            btnsetting.Location = new Point(3, 538);
+            btnsetting.Location = new Point(3, 597);
             btnsetting.Margin = new Padding(3, 4, 3, 4);
             btnsetting.Name = "btnsetting";
             btnsetting.Size = new Size(216, 81);
@@ -291,6 +293,21 @@
             pnlcontent.Name = "pnlcontent";
             pnlcontent.Size = new Size(1154, 685);
             pnlcontent.TabIndex = 3;
+            // 
+            // btnCustomer
+            // 
+            btnCustomer.FlatAppearance.BorderSize = 0;
+            btnCustomer.FlatStyle = FlatStyle.Flat;
+            btnCustomer.Image = (Image)resources.GetObject("btnCustomer.Image");
+            btnCustomer.Location = new Point(3, 181);
+            btnCustomer.Name = "btnCustomer";
+            btnCustomer.Size = new Size(153, 53);
+            btnCustomer.TabIndex = 7;
+            btnCustomer.Text = "Customers";
+            btnCustomer.TextAlign = ContentAlignment.MiddleLeft;
+            btnCustomer.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnCustomer.UseVisualStyleBackColor = true;
+            btnCustomer.Click += btnCustomer_Click;
             // 
             // MainForm
             // 
@@ -342,5 +359,6 @@
         private System.Windows.Forms.PictureBox flpPictureBoxRight;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripStatusLabel lblStatus;
+        private Button btnCustomer;
     }
 }
